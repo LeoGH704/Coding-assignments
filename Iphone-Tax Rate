@@ -1,0 +1,37 @@
+ASSIGNMENT: Write a program that asks the user to enter the cost of an iPhone 12. 
+The program should then calculate the dollar amount of tax due on that cost (The tax rate is 11.5%), 
+and then display the total cost (Cost + Tax) to the user.
+-----------------------------------------------------------------------------------------------------
+iphoneprice = float(input("Enter I-Phone 12 price: "))
+#this is the part where the user enters the iphone 21 amount. 
+#I use a float so the user can enter either a number without decimal 
+#or a number with a decimal.
+
+salestax = 0.115
+#This is the sales tax for the purchase.
+
+
+total = salestax * iphoneprice
+#this is the where i mulitply the sales tax with the iphone price. 
+
+
+print ("Your total amount is: ", total + iphoneprice)
+#this will result in "you total amount is". 
+#then the total of the calculated product total addded to the iphone price
+
+
+#----------------------------------------------------------------------------
+#this section is to break down what i did for the user 
+
+print ("Iphone Price: ",iphoneprice)
+#this will  print "iphone price" which means the price selected
+
+print ("Tax: ", salestax)
+#this will print "tax" which is the tax 11.5% or 0.115
+
+print (iphoneprice, "x", salestax, "=", total + iphoneprice)
+#this will print the iphone price times (x) the sales tax. 
+#then the total amount added to the iphone price
+
+print("HAVE A GOOD DAY BYE FOR NOW!")
+#self explanatory message
