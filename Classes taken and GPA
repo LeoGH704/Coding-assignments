@@ -1,0 +1,65 @@
+TASK:
+  Design and write a program that should obtain the following information from the user:
+•	Number of Classes Taken
+•	Overall GPA
+Once obtained the program should validate the student's eligibility for graduation using the following criteria:
+•	A student is eligible for graduation if they have taken more than 24 classes, with a minimum overall GPA of 2.0 
+•	A student will graduate "cum laude" if their GPA is between 3.5 and 3.79
+•	A student will graduate "magna cum laude" if their GPA is between 3.8 and 3.89
+•	A student will graduate "summa cum laude" if their GPA is 3.9 or above.
+The program should display to the user their eligibility for graduation (eligible or not eligible), 
+and if they are eligible for honors, it should state to the user which honors. 
+-------------------------------------------------------------------------------------------------------------------
+star = int(input("How many classes have you took? "))
+#this tells the user to input their number of classes
+
+gpa = float(input("What is your current GPA? "))
+#this tells the user to enter their gpa
+
+if star > 24:
+#Based of a minimum of 24 classes students are Eligilable for graduation.
+   
+   if gpa > 2.0:
+#Based of a minimum of a 2.0 gpa students are Eligilable for graduation.  
+ 
+       print("CONGRATULATIONS YOU ARE ELIGIBLE FOR GRADUATION! YOUR NUMBER OF CLASSES AND GPA MEET THE REQUIREMENTS :) ")
+#if the student met the 2.0 gpa and 24 classes minimum they will be eligible for graduation.       
+
+       if 3.5 <= gpa <= 3.79:
+
+            print("CONGRATES YOU MADE IT TO HONORS. YOU WILL GRADUATE AS A CUM LAUDE.")
+# =============================================================================
+# if the studnets Gpa is between 3.5 and 3.79 they will graudate a CUM LAUDE
+# =============================================================================   
+
+       elif  3.8 <= gpa <= 3.89:
+    
+             print("CONGRATES YOU MADE IT TO HONORS. YOU WILL GRAUDATE AS A MAGNA CUM LAUDE.")
+
+# =============================================================================
+# if the studnets Gpa is between 3.8 and 3.89 they will graudate a MAGNA CUM LAUDE
+# =============================================================================
+            
+       elif  3.9 <= gpa <= 5.1:
+      
+                print("CONGRATES YOU MADE IT TO THE HIGHEST ACHIEVEMENT OF HONORS. YOU WILL GRAUDATE AS A SUMMA  CUM LAUDE")
+# =============================================================================
+# if the studnets Gpa is between 3.9 and 5.1 they will graudate a SUMMA CUM LAUDE
+# =============================================================================
+                            
+                
+   else:
+        
+         print("SORRY YOU ARE NOT ELIGIBLE FOR GRADUATION. YOUR GPA IS TOO LOW IT NEEDS TO BE A MINIMUM OF 2.0.") 
+# =============================================================================
+# if the studnets Gpa is less than 2.0 they will not be eligible for graduation
+# =============================================================================
+                     
+         
+else:
+    
+    print("SORRY YOU ARE NOT ELIGIBLE FOR GRADUATION. YOU DO NOT MEET THE MINIMUM 24 CLASSES REQUIRE TO GRADUATE.")
+# =============================================================================
+# if the studnets number of classes are not 24 minimum than they will not be eligilble for graduation
+# =============================================================================
+               
