@@ -1,1 +1,191 @@
+TASK: A software company sells two products - Productivity and Efficiency.
+Productivity sells for $110 and Efficiency sells for $180.
+Quantity discounts for Productivity are as follows:
+10 - 19 : 10%
+20 - 49: 20%
+50+ : 35%
+Quantity discounts for Efficiency are as follows:
+10 - 29 : 15%
+30 - 39: 20%
+40+ : 35%
+
+Write a program that asks the user which package they would like to purchase, 
+and the quantity that they would like to purchase. 
+The program should then display to the user the discount applicable (if any), 
+and the final cost of their purchase.
+
+You should also develop and submit the pseudocode OR flowchart for this program
+-------------------------------------------------------------------------------
+PART ONE-Pseudocode
+1)	 Ask the user what they would like to buy
+2)	 If the answer is Package, then we can move on to the next step
+3)	 Next the program will display the package quantities: Productivity sells for 110 and           efficiency sells at 180
+4)	 The next question pops up and asks which quality they would want:
+5)	 If the user enters productivity 
+6)	 The question that comes up is the items they desire to purchase.
+7)	 If the user enters a number from 1-9 they do not qualify for a discount
+8)	 If the user enters a number from 10-19 they qualify for 10 % discount
+9)	 If the user enters a number from 20-49 they qualify for 20 % discount
+10)	If the user enters a number from 50-60 they qualify for a 35% discount
+11)	Next it will compute the cost: productivity(110)*the discount(depends the item#)
+12)	The final cost is: cost minus the discount (please see line 44-61 in screenshot)
+13)	Then the final cost will be displayed 
+14)	If the user enters efficiency 
+15)	The question that comes up is the items they desire to purchase.
+16)	If the user enters a number from 1-9 they do not qualify for a discount
+17)	If the user enters a number from 10-29 they qualify for 15 % discount
+18)	If the user enters a number from 30-39 they qualify for 20 % discount
+19)	If the user enters a number from 40-50 they qualify for 35 % discount
+20)	Next it will compute the cost: efficiency(180)*the discount(depends the item#)
+21)	The final cost is: cost minus the discount (please see line 44-61 in screenshot)
+22)	Then the final cost will be displayed
+23)	If the user doesn’t enter productivity or efficiency the program stops and tells them “ your answer is not productivity or efficiency” 
+24)	If the user enters another word that is not package. The program stops and tells them “your answer is not package”
+
+PART TWO-CODE
+
+hello = input("Hello! What would you like to purchase today? ").upper()
+#asks the user what they would want to purchase
+producivity = 110
+efficiency = 180
+#=============================================================================
+# this is where i define productivity and efficiency to give them a value price
+#=============================================================================
+
+if "PACKAGE" == hello:
+    
+    print("Ok you would like to purchase a package.")
+    
+    print("Package quantity for productivity sells at $110.")
+    
+    print("Package quanitiy for Efficiency sells for $180.")
+    
+#=============================================================================
+# the answer has to be package for the code to work.
+# this will display the prices for productivity and efficiency
+# ==============================================================
+    question = input("Would you like the purhase the quanitity of productivity or efficiency?    ").lower()
+   #Asks the user what quntity they would like to purchase productivity or efficiency
+     
+    if "productivity" == question:
+    
+      question1 = int(input("How many items would you want ? "))
+      
+      cost = producivity * question1
+      
+      discount1 = 0.10
+      percentage1 = "{:.0%}".format(discount1)
+      
+      discount2 = 0.20
+      percentage2 = "{:.0%}".format(discount2)
+      
+      discount3= 0.35
+      percentage3 = "{:.0%}".format(discount3)
+#=============================================================================
+# if the answer is productivity then the next follows
+# the question gets asked how many items do they want
+# the equation to compute cost is there
+# then the type of discount prices is added        
+# =============================================================================
+      if 10 <= question1 <= 19:
+          
+         print("You get a discount of", percentage1)
+         
+         finalcost= cost * discount1
+         
+         print("Your final cost is", cost - finalcost)
+         
+      elif 20 <= question1 <= 49:
+          
+         print("You get a discount of", percentage2)
+         
+         finalcost= cost * discount2
+         
+         print("Your final cost is", cost - finalcost)
+   
+     elif 50 <= question1 <= 60:
+          
+         print("You get a discount of", percentage3)
+         
+         finalcost= cost * discount3
+         
+         print("Your final cost is", cost - finalcost)
+         
+      elif 1 <= question1 <= 9:
+          
+         print("Sorry you don't qualify for a discount")
+         
+         print("Your final cost is", producivity)
+     
+    else:
+          print("Sorry your answer is not productivity nor efficiency ...Goodbye")
+         
+# if the user enters a number bw 1-9 they get no discount
+# if the user enters a number bw 10-19 they get 10% off
+# if the user enters a number bw 20-49 they get 20% off   
+# if the user enters a number bw 50-60 they get 35% off
+# for each discount the total is being calculated 
+# then the total will be displayed
+  
+  if "efficiency" == question:
+          
+        question2 = int(input("How many items would you want ? "))
+         
+        cost = efficiency * question2
+        
+        Discount1 = 0.15
+        Percentage1 = "{:.0%}".format(Discount1)
+      
+        Discount2 = 0.20
+        Percentage2 = "{:.0%}".format(Discount2)
+      
+        Discount3= 0.35
+        Percentage3 = "{:.0%}".format(Discount3)
+    #=============================================================================
+# if the answer is efficiency then the next follows
+# the question gets asked how many items do they want
+# the equation to compute cost is there
+# then the type of discount prices is added        
+#============================================================================= 
+        if 10 <= question2 <= 29:
+            
+            print("you get a discount of", Percentage1)
+            
+            finalcost = cost * Discount1
+            
+            print("Your final cost is", cost - finalcost)
+           
+        elif 30 <= question2 <= 39:
+            
+            print("you get a discount of", Percentage2)
+            
+            finalcost = cost * Discount2
+            
+            print("Your final cost is", cost - finalcost)
+.       
+        elif 40 <= question2 <= 50:
+            
+            print("you get a discount of", Percentage3)
+            
+            finalcost = cost * Discount3
+            
+            print("Your final cost is", cost - finalcost)
+        
+        elif 1 <= question2 <= 9:
+          
+           print("sorry you don't qualify for a discount")
+    
+           print("Your final cost is", efficiency)
+#=============================================================================
+# if the user enters a number bw 1-9 they get no discount
+# if the user enters a number bw 10-29 they get 15% off
+# if the user enters a number bw 30-39 they get 20% off   
+# if the user enters a number bw 40-50 they get 35% off
+# for each discount the total is being calculated 
+#if the user doesn't enter productivity or efficiency the code stops
+#=============================================================================
+           
+else:
+   print("Sorry your answer is not package...Goodbye!")
+#if the user doesnt enter package the program ends
 
