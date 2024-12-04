@@ -1,0 +1,43 @@
+Write a program that accepts a series of numbers from the user until the user
+enters a number less than -10 to indicate that they would like to stop. 
+ 
+Each time the user enters a new number, the program should display the
+current cumulative total. 
+
+When the user indicates that they would like to 
+
+stop,the program should display the final total
+
+(not including the value the user entered to stop the program).
+
+"""
+======================================================================================
+total =0 
+while True:
+
+    number = int(input(('Enter a number (Use a number less than -10 for quitting): ')))
+    
+    if number < -10:
+        
+        print('Final total:', total)
+        
+        break
+    
+    total = total + number
+    
+    print('Current cumulative total:', total)
+
+# =============================================================================
+# total is set to 0
+# will use a while loop bc only the user knows when to stop
+# while loop is true then ...
+# function is the question 
+#   if statement- if a number less than -10 then the program ends
+#   then it will display the final total
+#   will use a break
+# equation to add total and the number 
+# then the display will demonstrate the cumulative total
+# =============================================================================
+    
+  
+     
