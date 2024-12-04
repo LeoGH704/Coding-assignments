@@ -1,0 +1,71 @@
+"""
+write a program that asks the user for two numbers - x & y. 
+
+After accepting these numbers,the program should print a list of each number 
+between these two numbers and that number squared. 
+
+The program must print this list starting from the lower number to the higher 
+number. 
+
+Example Output
+Please enter x: 2
+Please enter y: 7
+2 4
+3 9
+4 16
+5 25
+6 36
+7 49
+"""
+--------------------------------------------------------------------------------------
+x = int(input("enter a number for x: "))
+
+y = int(input("enter a number for y: "))
+# =============================================================================
+# Tells the user to enter a number for x
+# Tells the user to enter a number for y
+# =============================================================================
+
+if x < y:
+    
+    for i in range(x,y+1):
+        
+        product = i * i
+        
+        print(i, product)
+# =============================================================================
+#  If x is less than y 
+#  will use a for loop bc I want to have control of the program 
+#  the variable i in iterable of range x, y+1 
+#  equation to compute the list of each number bw x and y
+#  will display the final totals for the numbers entered for x and y 
+# =============================================================================
+        
+else:
+    
+    for i in range(y, x+1):
+        
+        product = i * i
+        
+        print(i, product)
+# =============================================================================
+#  else y is less than x 
+#  the variable i in iterable of range y, x+1 
+#  equation to compute the list of each number bw x and y
+#  will display the final totals for the numbers entered for x and y 
+# =============================================================================
+    
+    
+    
+   
+    
+
+    
+    
+ 
+    
+
+    
+    
+   
+
